@@ -1,0 +1,18 @@
+﻿- Interfeisas - IProduct: ‘bool CanBeConsumed();’
+- Reikalingos klasės, kurios implementuoja IProduct interfeisą: Milk, Bread,Butter, Cheese;
+- Visos klasės turi po metodą CanBeConsumed();, kuris grąžina true reikšme tik tuo atveju jei atsitiktinis skaičius sugeneruotas objekto kūrimo metu nuo 1-5 yra lygus:
+- Milk atveju 1 arba 2;
+- Kitais klasių atvejais 1, 2, 3;
+- Klasė "ProductChecker" - turi turėti metodą Check(IProduct product), kurio pagalba išvesime į konsolę informacija ar galima vartuoti produktą, - ar negalima
+
+
+
+Sukurti parduotuvę, kuri parduoda saldainius, knygas, puodukus.
+Jie visi turi pavadinimą, kiekį. Programa turėtų nepasibaigti įrašius tik vieną komandą,
+turėtų leisti kelias. Reikia panaudoti objektinį programavimą.
+
+Galimos komandos konsolėje:
+"List" išspausdina informacija, ką galima nusipirkti parduotuvėje, koks kiekis ir kokios kainos. Išpirktų produktų neturėtų rodyti.
+"Buy Candy 20" - turėtų nupirkti visus egzistuojančius jeigu toks item egzistuoja parduotuvėje ir yra toks kiekis. Jei ne, turėtų parodyti atitinkamą žinutę.
+"Add Cup 30" - turėtų papildyti parduotuvę su atitinkamu produktu ir kiekiu. Tai turętų atsivaizduoti ir "List" komandoje.
+Jei tokiu produktų jau yra, papildyti.

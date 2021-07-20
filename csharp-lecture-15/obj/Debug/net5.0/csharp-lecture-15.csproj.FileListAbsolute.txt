@@ -1,0 +1,16 @@
+F:\Desktop\dotNET\C#\7.18\csharp-lecture-15\csharp-lecture-15\bin\Debug\net5.0\csharp-lecture-15.exe
+F:\Desktop\dotNET\C#\7.18\csharp-lecture-15\csharp-lecture-15\bin\Debug\net5.0\csharp-lecture-15.deps.json
+F:\Desktop\dotNET\C#\7.18\csharp-lecture-15\csharp-lecture-15\bin\Debug\net5.0\csharp-lecture-15.runtimeconfig.json
+F:\Desktop\dotNET\C#\7.18\csharp-lecture-15\csharp-lecture-15\bin\Debug\net5.0\csharp-lecture-15.runtimeconfig.dev.json
+F:\Desktop\dotNET\C#\7.18\csharp-lecture-15\csharp-lecture-15\bin\Debug\net5.0\csharp-lecture-15.dll
+F:\Desktop\dotNET\C#\7.18\csharp-lecture-15\csharp-lecture-15\bin\Debug\net5.0\ref\csharp-lecture-15.dll
+F:\Desktop\dotNET\C#\7.18\csharp-lecture-15\csharp-lecture-15\bin\Debug\net5.0\csharp-lecture-15.pdb
+F:\Desktop\dotNET\C#\7.18\csharp-lecture-15\csharp-lecture-15\obj\Debug\net5.0\csharp-lecture-15.csproj.AssemblyReference.cache
+F:\Desktop\dotNET\C#\7.18\csharp-lecture-15\csharp-lecture-15\obj\Debug\net5.0\csharp-lecture-15.GeneratedMSBuildEditorConfig.editorconfig
+F:\Desktop\dotNET\C#\7.18\csharp-lecture-15\csharp-lecture-15\obj\Debug\net5.0\csharp-lecture-15.AssemblyInfoInputs.cache
+F:\Desktop\dotNET\C#\7.18\csharp-lecture-15\csharp-lecture-15\obj\Debug\net5.0\csharp-lecture-15.AssemblyInfo.cs
+F:\Desktop\dotNET\C#\7.18\csharp-lecture-15\csharp-lecture-15\obj\Debug\net5.0\csharp-lecture-15.csproj.CoreCompileInputs.cache
+F:\Desktop\dotNET\C#\7.18\csharp-lecture-15\csharp-lecture-15\obj\Debug\net5.0\csharp-lecture-15.dll
+F:\Desktop\dotNET\C#\7.18\csharp-lecture-15\csharp-lecture-15\obj\Debug\net5.0\ref\csharp-lecture-15.dll
+F:\Desktop\dotNET\C#\7.18\csharp-lecture-15\csharp-lecture-15\obj\Debug\net5.0\csharp-lecture-15.pdb
+F:\Desktop\dotNET\C#\7.18\csharp-lecture-15\csharp-lecture-15\obj\Debug\net5.0\csharp-lecture-15.genruntimeconfig.cache
