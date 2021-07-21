@@ -6,49 +6,68 @@ using System.Threading.Tasks;
 
 namespace csharp_lecture_15
 {
-    internal class Product
+    internal abstract class Product
     {
-        protected List<Product> _productList;
         protected Type _productType;
-
         protected int _price;
         protected int _quantity;
 
-        /*        public abstract int SetPrice();
+        public abstract int SetPrice();
 
-                public abstract int SetQuantity();
+        public abstract int SetQuantity();
 
-                public abstract Type SetType();*/
+        public abstract Type SetType();
 
-        public Product()
+        public override string ToString()
         {
-            _productList = new List<Product> { };
+            return string.Format("Type = {0}, Price = {1}, Quantity = {2}",
+                this._productType,
+                this._price,
+                this._quantity);
         }
 
-        public List<Product> AddToList(Product product)
+        public void CheckInventory(Type type)
         {
-            _productList.Add(product);
-            return _productList;
-        }
-
-        public void PrintList(List<Product> list)
-        {
-            foreach (var product in list)
+            if (type == _productType)
             {
-                Console.WriteLine($"Type: {_productType}; Price: {_price}; Quantity: {_quantity}");
+                Console.WriteLine($"Currently we have {_quantity} of {_productType}");
             }
         }
 
-        public void GetList(Product product)
+        public bool CheckSufficiency(int buyQnt)
         {
-            Console.WriteLine($"{product} type is {_productType}. Price is: {_price} and quantity: {_quantity}");
+            if (buyQnt <= _quantity)
+            {
+                return true;
+            }
+            return false;
         }
-    }
 
-    internal enum Type
-    {
-        Book,
-        Cup,
-        Candy
+        public bool CheckExistance()
+        {
+            if (0 == _quantity)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public void Sell(Type type, int quantity)
+        {
+            if (type == _productType)
+            {
+                _quantity -= quantity;
+                Console.WriteLine($"Currently we have {_quantity} {_productType} left.");
+            }
+        }
+
+        public void Fill(Type type, int quantity)
+        {
+            if (type == _productType)
+            {
+                _quantity += quantity;
+                Console.WriteLine($"{quantity} of {_productType} has been added. Now we have {_quantity}.");
+            }
+        }
     }
 }

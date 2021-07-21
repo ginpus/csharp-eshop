@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace csharp_lecture_15
 {
-    internal class Book : Product
+    internal class Cup : Product
     {
         protected Random _rd;
-        protected readonly int _maxStock = 120;
+        protected readonly int _maxStock = 60;
 
         public override int SetPrice()
         {
             Random _rd = new Random();
-            _price = _rd.Next(12, 35);
+            _price = _rd.Next(5, 15);
             return _price;
         }
 
@@ -27,7 +27,7 @@ namespace csharp_lecture_15
 
         public override Type SetType()
         {
-            _productType = Type.Book;
+            _productType = Type.Cup;
             return _productType;
         }
     }
