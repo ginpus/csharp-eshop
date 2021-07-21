@@ -47,7 +47,7 @@ namespace csharp_lecture_15
 
             while (desire == "y")
             {
-                Console.Write("\n1: List all items in the shop;\n2: Buy item;\n3: Add item;\n0: Exit shop;\n\nPick your choice: ");
+                shop.PrintAllSelections();
                 var input1 = Console.ReadLine();
                 var choice1 = Convert.ToInt32(input1);
 
@@ -153,7 +153,6 @@ namespace csharp_lecture_15
                         Console.WriteLine($"You are about to fill up books stock. Select amount:");
                         var input4 = Console.ReadLine();
                         var choice4 = Convert.ToInt32(input4);
-                        Console.WriteLine($"Great! {choice4} added to your stock of books.");
                         books.Fill((Type)choice3, choice4);
                     }
                     else if (choice3 == 2)
@@ -161,7 +160,6 @@ namespace csharp_lecture_15
                         Console.WriteLine($"You are about to fill up cups stock. Select amount:");
                         var input4 = Console.ReadLine();
                         var choice4 = Convert.ToInt32(input4);
-                        Console.WriteLine($"Great! {choice4} added to your stock of cups.");
                         cups.Fill((Type)choice3, choice4);
                     }
                     else if (choice3 == 3)
@@ -169,7 +167,6 @@ namespace csharp_lecture_15
                         Console.WriteLine($"You are about to fill up candies stock. Select amount:");
                         var input4 = Console.ReadLine();
                         var choice4 = Convert.ToInt32(input4);
-                        Console.WriteLine($"Great! {choice4} added to your stock of candies.");
                         candies.Fill((Type)choice3, choice4);
                     }
                     else
@@ -178,7 +175,7 @@ namespace csharp_lecture_15
                         break;
                     }
                 }
-                else if (choice1 == 0)
+                else if (choice1 == 4)
                 {
                     Console.WriteLine("Exiting shop. Bye-bye");
                     desire = "n";

@@ -42,12 +42,13 @@ namespace csharp_lecture_15
             }
         }
 
-        /*        public Product CheckProduct(Type type)
-                {
-                    foreach (Product product in _productList)
-                    {
-                        if (type == Type.);
-                    }
-                }*/
+        public void PrintAllSelections()
+        {
+            var count = 0;
+            foreach (var name in Enum.GetNames(typeof(Selection)))
+            {
+                Console.WriteLine($"{++count}: {name}");
+            }
+        }
     }
 }
