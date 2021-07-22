@@ -182,24 +182,69 @@ namespace csharp_lecture_15
                     var choice3 = Convert.ToInt32(input3);
                     if (choice3 == 1)
                     {
-                        Console.WriteLine($"You are about to fill up books stock. Select amount:");
-                        var input4 = Console.ReadLine();
-                        var choice4 = Convert.ToInt32(input4);
-                        books.Fill((Type)choice3, choice4);
+                        if (books.GetStock() < books.CheckMaxStock())
+                        {
+                            Console.WriteLine($"You are about to fill up books stock. Maximum allowed stock - {books.CheckMaxStock()}. Select amount:");
+                            var input4 = Console.ReadLine();
+                            var choice4 = Convert.ToInt32(input4);
+                            if (books.CheckMaxStock() >= books.GetStock() + choice4)
+                            {
+                                books.Fill((Type)choice3, choice4);
+                            }
+                            else
+                            {
+                                books.Fill((Type)choice3, books.CheckMaxStock() - books.GetStock());
+                                Console.WriteLine($"Book stock is full!");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Book stock is full!");
+                        }
                     }
                     else if (choice3 == 2)
                     {
-                        Console.WriteLine($"You are about to fill up cups stock. Select amount:");
-                        var input4 = Console.ReadLine();
-                        var choice4 = Convert.ToInt32(input4);
-                        cups.Fill((Type)choice3, choice4);
+                        if (cups.GetStock() < cups.CheckMaxStock())
+                        {
+                            Console.WriteLine($"You are about to fill up cup stock. Maximum allowed stock - {cups.CheckMaxStock()}. Select amount:");
+                            var input4 = Console.ReadLine();
+                            var choice4 = Convert.ToInt32(input4);
+                            if (cups.CheckMaxStock() >= cups.GetStock() + choice4)
+                            {
+                                cups.Fill((Type)choice3, choice4);
+                            }
+                            else
+                            {
+                                cups.Fill((Type)choice3, cups.CheckMaxStock() - cups.GetStock());
+                                Console.WriteLine($"Cup stock is full!");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Cup stock is full!");
+                        }
                     }
                     else if (choice3 == 3)
                     {
-                        Console.WriteLine($"You are about to fill up candies stock. Select amount:");
-                        var input4 = Console.ReadLine();
-                        var choice4 = Convert.ToInt32(input4);
-                        candies.Fill((Type)choice3, choice4);
+                        if (candies.GetStock() < candies.CheckMaxStock())
+                        {
+                            Console.WriteLine($"You are about to fill up candy stock. Maximum allowed stock - {candies.CheckMaxStock()}. Select amount:");
+                            var input4 = Console.ReadLine();
+                            var choice4 = Convert.ToInt32(input4);
+                            if (candies.CheckMaxStock() >= candies.GetStock() + choice4)
+                            {
+                                candies.Fill((Type)choice3, choice4);
+                            }
+                            else
+                            {
+                                candies.Fill((Type)choice3, candies.CheckMaxStock() - candies.GetStock());
+                                Console.WriteLine($"Candy stock is full!");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Candy stock is full!");
+                        }
                     }
                     else
                     {

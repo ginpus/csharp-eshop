@@ -11,9 +11,12 @@ namespace csharp_lecture_15
     {
         protected List<Product> _productList;
 
+        //private Book _book;
+
         public Shop()
         {
             _productList = new List<Product> { };
+            //_book = new Book(100, 5);
         }
 
         public List<Product> AddToList(Product product)

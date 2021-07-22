@@ -18,6 +18,8 @@ namespace csharp_lecture_15
 
         public abstract Type SetType();
 
+        public abstract int CheckMaxStock();
+
         public override string ToString()
         {
             return string.Format("Type = {0}, Price = {1}, Quantity = {2}",
@@ -45,11 +47,12 @@ namespace csharp_lecture_15
 
         public bool CheckExistance()
         {
-            if (0 == _quantity)
+            return 0 != _quantity;
+            /*if (0 == _quantity)
             {
                 return false;
             }
-            return true;
+            return true;*/
         }
 
         public void Sell(Type type, int quantity)
@@ -73,6 +76,11 @@ namespace csharp_lecture_15
         public int GetPrice()
         {
             return _price;
+        }
+
+        public int GetStock()
+        {
+            return _quantity;
         }
     }
 }

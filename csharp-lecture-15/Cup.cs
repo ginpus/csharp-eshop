@@ -11,6 +11,11 @@ namespace csharp_lecture_15
         protected Random _rd;
         protected readonly int _maxStock = 60;
 
+        public override int CheckMaxStock()
+        {
+            return _maxStock;
+        }
+
         public override int SetPrice()
         {
             Random _rd = new Random();
