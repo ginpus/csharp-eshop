@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Desktop\\dotNET\\C#\\7.20\\csharp-lecture-15\\csharp-lecture-15\\csharp-lecture-15.csproj",
-      "projectName": "csharp-lecture-15",
-      "projectPath": "F:\\Desktop\\dotNET\\C#\\7.20\\csharp-lecture-15\\csharp-lecture-15\\csharp-lecture-15.csproj",
+      "projectUniqueName": "F:\\Desktop\\dotNET\\C#\\7.20\\csharp-lecture-15\\csharp-lecture-15\\csharp-eshop.csproj",
+      "projectName": "csharp-eshop",
+      "projectPath": "F:\\Desktop\\dotNET\\C#\\7.20\\csharp-lecture-15\\csharp-lecture-15\\csharp-eshop.csproj",
       "packagesPath": "C:\\Users\\ginta\\.nuget\\packages\\",
       "outputPath": "F:\\Desktop\\dotNET\\C#\\7.20\\csharp-lecture-15\\csharp-lecture-15\\obj\\",
       "projectStyle": "PackageReference",

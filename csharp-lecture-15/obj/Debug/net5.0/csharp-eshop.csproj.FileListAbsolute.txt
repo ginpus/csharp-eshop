@@ -1,0 +1,16 @@
+F:\Desktop\dotNET\C#\7.20\csharp-lecture-15\csharp-lecture-15\bin\Debug\net5.0\csharp-eshop.exe
+F:\Desktop\dotNET\C#\7.20\csharp-lecture-15\csharp-lecture-15\bin\Debug\net5.0\csharp-eshop.deps.json
+F:\Desktop\dotNET\C#\7.20\csharp-lecture-15\csharp-lecture-15\bin\Debug\net5.0\csharp-eshop.runtimeconfig.json
+F:\Desktop\dotNET\C#\7.20\csharp-lecture-15\csharp-lecture-15\bin\Debug\net5.0\csharp-eshop.runtimeconfig.dev.json
+F:\Desktop\dotNET\C#\7.20\csharp-lecture-15\csharp-lecture-15\bin\Debug\net5.0\csharp-eshop.dll
+F:\Desktop\dotNET\C#\7.20\csharp-lecture-15\csharp-lecture-15\bin\Debug\net5.0\ref\csharp-eshop.dll
+F:\Desktop\dotNET\C#\7.20\csharp-lecture-15\csharp-lecture-15\bin\Debug\net5.0\csharp-eshop.pdb
+F:\Desktop\dotNET\C#\7.20\csharp-lecture-15\csharp-lecture-15\obj\Debug\net5.0\csharp-eshop.csproj.AssemblyReference.cache
+F:\Desktop\dotNET\C#\7.20\csharp-lecture-15\csharp-lecture-15\obj\Debug\net5.0\csharp-eshop.GeneratedMSBuildEditorConfig.editorconfig
+F:\Desktop\dotNET\C#\7.20\csharp-lecture-15\csharp-lecture-15\obj\Debug\net5.0\csharp-eshop.AssemblyInfoInputs.cache
+F:\Desktop\dotNET\C#\7.20\csharp-lecture-15\csharp-lecture-15\obj\Debug\net5.0\csharp-eshop.AssemblyInfo.cs
+F:\Desktop\dotNET\C#\7.20\csharp-lecture-15\csharp-lecture-15\obj\Debug\net5.0\csharp-eshop.csproj.CoreCompileInputs.cache
+F:\Desktop\dotNET\C#\7.20\csharp-lecture-15\csharp-lecture-15\obj\Debug\net5.0\csharp-eshop.dll
+F:\Desktop\dotNET\C#\7.20\csharp-lecture-15\csharp-lecture-15\obj\Debug\net5.0\ref\csharp-eshop.dll
+F:\Desktop\dotNET\C#\7.20\csharp-lecture-15\csharp-lecture-15\obj\Debug\net5.0\csharp-eshop.pdb
+F:\Desktop\dotNET\C#\7.20\csharp-lecture-15\csharp-lecture-15\obj\Debug\net5.0\csharp-eshop.genruntimeconfig.cache

@@ -69,5 +69,10 @@ namespace csharp_lecture_15
                 Console.WriteLine($"{quantity} of {_productType} has been added. Now we have {_quantity}.");
             }
         }
+
+        public int GetPrice()
+        {
+            return _price;
+        }
     }
 }

@@ -14,6 +14,8 @@ namespace csharp_lecture_15
             var books = new Book();
             var cups = new Cup();
             var candies = new Candy();
+            //creation of user
+            var user = new User();
 
             //setting properties for each Product
             books.SetPrice();
@@ -32,6 +34,9 @@ namespace csharp_lecture_15
             shop.AddToList(books);
             shop.AddToList(cups);
             shop.AddToList(candies);
+
+            //filling up initial balance for user
+            user.SetRandomBalance();
 
             Console.WriteLine("----------Welcome to the Dreamland shop!----------");
 
@@ -74,14 +79,23 @@ namespace csharp_lecture_15
                             Console.WriteLine($"You are about to buy books. Select desired amount:");
                             var input3 = Console.ReadLine();
                             var choice3 = Convert.ToInt32(input3);
-                            if (books.CheckSufficiency(choice3))
+                            if (books.GetPrice() * choice3 <= user.ShowBalance())
                             {
-                                Console.WriteLine($"Great! {choice3} added to your basket.");
-                                books.Sell((Type)choice2, choice3);
+                                if (books.CheckSufficiency(choice3))
+                                {
+                                    user.Buy((books.GetPrice() * choice3));
+                                    books.Sell((Type)choice2, choice3);
+                                    Console.WriteLine($"Great! {choice3} added to your basket.");
+                                    user.ShowBalance();
+                                }
+                                else
+                                {
+                                    Console.WriteLine($"Insufficient stock. Try selecting smaller quantity");
+                                }
                             }
                             else
                             {
-                                Console.WriteLine($"Insufficient stock. Try selecting smaller quantity");
+                                Console.WriteLine($"Insufficient funds for selected goods");
                             }
                         }
                         else
@@ -97,14 +111,23 @@ namespace csharp_lecture_15
                             Console.WriteLine($"You are about to buy cups. Select desired amount:");
                             var input3 = Console.ReadLine();
                             var choice3 = Convert.ToInt32(input3);
-                            if (cups.CheckSufficiency(choice3))
+                            if (cups.GetPrice() * choice3 <= user.ShowBalance())
                             {
-                                Console.WriteLine($"Great! {choice3} added to your basket.");
-                                cups.Sell((Type)choice2, choice3);
+                                if (cups.CheckSufficiency(choice3))
+                                {
+                                    user.Buy((cups.GetPrice() * choice3));
+                                    cups.Sell((Type)choice2, choice3);
+                                    Console.WriteLine($"Great! {choice3} added to your basket.");
+                                    user.ShowBalance();
+                                }
+                                else
+                                {
+                                    Console.WriteLine($"Insufficient stock. Try selecting smaller quantity");
+                                }
                             }
                             else
                             {
-                                Console.WriteLine($"Insufficient stock. Try selecting smaller quantity");
+                                Console.WriteLine($"Insufficient funds for selected goods");
                             }
                         }
                         else
@@ -117,17 +140,26 @@ namespace csharp_lecture_15
                         candies.CheckInventory((Type)choice2);
                         if (candies.CheckExistance())
                         {
-                            Console.WriteLine($"You are about to buy cups. Select desired amount:");
+                            Console.WriteLine($"You are about to buy candies. Select desired amount:");
                             var input3 = Console.ReadLine();
                             var choice3 = Convert.ToInt32(input3);
-                            if (candies.CheckSufficiency(choice3))
+                            if (candies.GetPrice() * choice3 <= user.ShowBalance())
                             {
-                                Console.WriteLine($"Great! {choice3} added to your basket.");
-                                candies.Sell((Type)choice2, choice3);
+                                if (candies.CheckSufficiency(choice3))
+                                {
+                                    user.Buy((candies.GetPrice() * choice3));
+                                    candies.Sell((Type)choice2, choice3);
+                                    Console.WriteLine($"Great! {choice3} added to your basket.");
+                                    user.ShowBalance();
+                                }
+                                else
+                                {
+                                    Console.WriteLine($"Insufficient stock. Try selecting smaller quantity");
+                                }
                             }
                             else
                             {
-                                Console.WriteLine($"Insufficient stock. Try selecting smaller quantity");
+                                Console.WriteLine($"Insufficient funds for selected goods");
                             }
                         }
                         else
@@ -176,6 +208,17 @@ namespace csharp_lecture_15
                     }
                 }
                 else if (choice1 == 4)
+                {
+                    user.ShowBalance();
+                }
+                else if (choice1 == 5)
+                {
+                    Console.WriteLine($"You are about to top up balance. Select amount:");
+                    var input = Console.ReadLine();
+                    var choice = Convert.ToInt32(input);
+                    user.TopUpBalance(choice);
+                }
+                else if (choice1 == 6)
                 {
                     Console.WriteLine("Exiting shop. Bye-bye");
                     desire = "n";

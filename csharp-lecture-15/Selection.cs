@@ -11,6 +11,8 @@ namespace csharp_lecture_15
         List_all_items = 1,
         Buy,
         Add,
+        Show_balance,
+        Top_up,
         Exit
     }
 }
