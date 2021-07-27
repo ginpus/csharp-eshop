@@ -86,5 +86,9 @@ namespace csharp_lecture_15
                 Console.WriteLine($"{++count}: {name}");
             }
         }
+
+        /*        public Basket CheckOut(Basket basket)
+                {
+                }*/
     }
 }
