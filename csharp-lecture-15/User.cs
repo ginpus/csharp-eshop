@@ -9,7 +9,14 @@ namespace csharp_lecture_15
     internal class User
     {
         protected int _balance;
+        private readonly Basket _basket;
+
         protected Random _rd;
+
+        public User()
+        {
+            _basket = new Basket(); // at creation of user, a Basket object gets created (which is in fact an empty list of Products)
+        }
 
         public int ShowBalance()
         {
