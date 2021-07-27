@@ -8,9 +8,13 @@ namespace csharp_lecture_15
 {
     internal abstract class Product
     {
+        //public Guid Id { get; set; };
         protected Type _productType;
+
+        protected readonly int _id;
         protected int _price;
         protected int _quantity;
+        // public Guid BasketId { get; set; };
 
         public abstract int SetPrice();
 
@@ -20,12 +24,25 @@ namespace csharp_lecture_15
 
         public abstract int CheckMaxStock();
 
+        public Product(int id, Type productType)
+        {
+            _id = id;
+            _productType = productType;
+            _quantity = SetQuantity(); //randomly generated value
+        }
+
+        public void ChangePrice(int newPrice)
+        {
+            _price = newPrice;
+        }
+
         public override string ToString()
         {
-            return string.Format("Type = {0}, Price = {1}, Quantity = {2}",
+            return string.Format("ID = {0}, Type = {1}, Price = {2}, Quantity = {3}",
+                this._id,
                 this._productType,
                 this._price,
-                this._quantity);
+                this._quantity); ;
         }
 
         public void CheckInventory(Type type)
@@ -47,30 +64,12 @@ namespace csharp_lecture_15
 
         public bool CheckExistance()
         {
-            return 0 != _quantity;
+            return 0 != _quantity; // return true, if quantity is not zero
             /*if (0 == _quantity)
             {
                 return false;
             }
             return true;*/
-        }
-
-        public void Sell(Type type, int quantity)
-        {
-            if (type == _productType)
-            {
-                _quantity -= quantity;
-                Console.WriteLine($"Currently we have {_quantity} {_productType} left.");
-            }
-        }
-
-        public void Fill(Type type, int quantity)
-        {
-            if (type == _productType)
-            {
-                _quantity += quantity;
-                Console.WriteLine($"{quantity} of {_productType} has been added. Now we have {_quantity}.");
-            }
         }
 
         public int GetPrice()
@@ -81,6 +80,21 @@ namespace csharp_lecture_15
         public int GetStock()
         {
             return _quantity;
+        }
+
+        public int GetId()
+        {
+            return (int)_productType;
+        }
+
+        public Type GetTyp()
+        {
+            return _productType;
+        }
+
+        public void SetNewQuantity(int quantity)
+        {
+            _quantity = quantity;
         }
     }
 }

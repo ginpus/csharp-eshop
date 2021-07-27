@@ -11,6 +11,11 @@ namespace csharp_lecture_15
         protected Random _rd;
         protected readonly int _maxStock = 2000;
 
+        public Candy(int id, Type productType) : base(id, productType)
+        {
+            _price = SetPrice();//randomly generated value
+        }
+
         public override int CheckMaxStock()
         {
             return _maxStock;
